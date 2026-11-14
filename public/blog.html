@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hindu Today - Blog</title>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sreevidyadhirajafoundation.com/blog.html">
+  <meta property="og:title" content="Blog">
+  <meta property="og:description" content="Inspiring thoughts, insightful stories, and the latest updates from Sree Vidyadhiraja Foundation.">
+  <meta property="og:image" content="https://www.sreevidyadhirajafoundation.com/img/blog-default.jpg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.sreevidyadhirajafoundation.com/blog.html">
+  <meta property="twitter:title" content="Blog - Sree Vidyadhiraja Foundation">
+  <meta property="twitter:description" content="Inspiring thoughts, insightful stories, and the latest updates from Sree Vidyadhiraja Foundation.">
+  <meta property="twitter:image" content="https://www.sreevidyadhirajafoundation.com/img/blog-default.jpg">
+  <meta name="theme-color" content="#061f33">
+  <link rel="icon" type="image/png" href="img/logov.png">
+  <script>document.documentElement.classList.replace('no-js','js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},2500);</script>
+
+  <!-- Fonts: Fraunces (display) + Plus Jakarta Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+
+  <!-- Framework & icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Design system -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="topbar d-none d-lg-block">
+      <div class="container">
+        <div class="d-flex gap-4">
+          <a href="tel:+919387292552"><i class="fa fa-phone-alt" aria-hidden="true"></i>+91 9387292552</a>
+          <a href="mailto:sreevidyadhirajafoundation@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i>sreevidyadhirajafoundation@gmail.com</a>
+        </div>
+        <span><i class="fa fa-map-marker-alt me-2" aria-hidden="true"></i>Thiruvananthapuram, Kerala</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-xl" aria-label="Main">
+      <div class="container">
+        <a href="index.html" class="navbar-brand brand">
+          <img src="img/opt/logo-160.png" alt="Sree Vidyadhiraja Foundation logo" width="44" height="44">
+          <span class="brand-name">The Hindu Today Online<small>Sree Vidyadhiraja Foundation</small></span>
+        </a>
+        <button class="nav-toggle d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-xl-auto">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="index.html#activity" class="nav-item nav-link">Activities</a>
+            <a href="product.html" class="nav-item nav-link">Campaign</a>
+            <a href="blog.html" class="nav-item nav-link active" aria-current="page">Blog</a>
+            <a href="videos.html" class="nav-item nav-link">Videos</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <div class="nav-cta">
+            <a href="donate.html" class="btn btn-gradient btn-sm px-4"><i class="fa fa-heart" aria-hidden="true"></i>Donate</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="page-main">
+  <section class="page-hero blog-hero">
+    <div class="banner-slider">
+      <div class="banner-track" id="bannerTrack"></div>
+    </div>
+    <div class="container">
+      <div class="hero-intro" style="max-width: 720px">
+        <span class="hero-badge"><span class="dot"><i class="fa fa-feather-alt" aria-hidden="true"></i></span>Stories &amp; Insights</span>
+        <h1>The Hindu Today <span class="text-gradient">Blog's</span></h1>
+        <p class="lead">Inspiring thoughts, insightful stories, and the latest updates from Sree Vidyadhiraja Foundation.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="blog-marquee" aria-label="Latest posts">
+    <div class="marquee-content" id="marqueeContent"></div>
+  </div>
+
+  <div class="search-container">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" class="search-input" placeholder="Search blogs by title or content..." autocomplete="off" aria-label="Search blogs">
+      <button class="clear-search" id="clearSearch" type="button" aria-label="Clear search">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      <button class="search-button" id="searchButton" type="button" aria-label="Search">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </button>
+      <div class="autocomplete-dropdown" id="autocompleteDropdown"></div>
+    </div>
+  </div>
+
+  <section class="section pt-5">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">From the blog</span>
+        <h2 class="section-title">Latest Articles</h2>
+        <p class="section-lead">Stay updated with our latest writings and social insights.</p>
+      </div>
+      <div class="blog-toolbar" data-reveal>
+        <p class="results-info" id="blogResultsInfo" aria-live="polite">Loading articles&hellip;</p>
+        <span class="blog-toolbar-hint d-none d-md-inline"><i class="far fa-lightbulb" aria-hidden="true"></i>Tip: search in English or Malayalam</span>
+      </div>
+      <div class="row g-4" id="blogContainer" data-stagger="90">
+        <div class="col-md-6 col-lg-4" aria-hidden="true">
+          <div class="skeleton"><div class="skeleton-media"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+        </div>
+        <div class="col-md-6 col-lg-4" aria-hidden="true">
+          <div class="skeleton"><div class="skeleton-media"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+        </div>
+        <div class="col-md-6 col-lg-4" aria-hidden="true">
+          <div class="skeleton"><div class="skeleton-media"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+        </div>
+        <div class="col-md-6 col-lg-4" aria-hidden="true">
+          <div class="skeleton"><div class="skeleton-media"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+        </div>
+        <div class="col-md-6 col-lg-4" aria-hidden="true">
+          <div class="skeleton"><div class="skeleton-media"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+        </div>
+        <div class="col-md-6 col-lg-4" aria-hidden="true">
+          <div class="skeleton"><div class="skeleton-media"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4" data-reveal>
+          <a href="index.html" class="brand footer-brand mb-4">
+            <img src="img/opt/logo-160.png" alt="" width="48" height="48" loading="lazy">
+            <span class="brand-name">Sree Vidyadhiraja Foundation</span>
+          </a>
+          <p class="mb-0">We are committed to supporting communities through education, healthcare, livelihood, and social welfare initiatives to build a compassionate and self-reliant society.</p>
+        </div>
+
+        <div class="col-sm-6 col-lg-4" data-reveal data-reveal-delay="100ms">
+          <h4>Contact Us</h4>
+          <ul class="footer-contact">
+            <li><span class="ico"><i class="fa fa-map-marker-alt" aria-hidden="true"></i></span><span>Thiruvananthapuram</span></li>
+            <li><span class="ico"><i class="fa fa-phone-alt" aria-hidden="true"></i></span><a href="tel:+919387292552">+91 9387292552</a></li>
+            <li><span class="ico"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="mailto:sreevidyadhirajafoundation@gmail.com">sreevidyadhirajafoundation@gmail.com</a></li>
+          </ul>
+          <a href="https://wa.me/919387292552" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm mt-4 px-4"><i class="fab fa-whatsapp" aria-hidden="true"></i>Chat on WhatsApp</a>
+        </div>
+
+        <div class="col-sm-6 col-lg-4" data-reveal data-reveal-delay="200ms">
+          <h4>Explore Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#activity">Activities</a></li>
+            <li><a href="index.html#sermon">Initiatives</a></li>
+            <li><a href="product.html">Campaign</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <div class="footer-cta mt-4">
+            <h5 class="mb-2">Support our mission</h5>
+            <p class="small mb-3">Every contribution helps education, healthcare and community welfare.</p>
+            <a href="donate.html" class="btn btn-gradient btn-sm px-4"><i class="fa fa-heart" aria-hidden="true"></i>Donate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2 text-center text-md-start">
+        <span>&copy; <a href="index.html">Sree Vidyadhiraja Foundation</a>, All Rights Reserved.</span>
+        <span>Designed By <a href="#">Hevinka</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#main" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 54 54" width="54" height="54" aria-hidden="true"><circle class="track" cx="27" cy="27" r="24"/><circle class="bar" cx="27" cy="27" r="24"/></svg>
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/motion.js"></script>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      getDocs,
+      query,
+      orderBy,
+      doc,
+      updateDoc,
+      increment
+    } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCxzn7eUe9QRa0sjLp4v6rS2RJU_cRCtkg",
+      authDomain: "vidyadhiraja-b6ec5.firebaseapp.com",
+      projectId: "vidyadhiraja-b6ec5",
+      storageBucket: "vidyadhiraja-b6ec5.firebasestorage.app",
+      messagingSenderId: "1018541742665",
+      appId: "1:1018541742665:web:4ded9d4c51d33edd203d98"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const bannerTrack = document.getElementById("bannerTrack");
+    const marqueeContent = document.getElementById("marqueeContent");
+    const blogContainer = document.getElementById("blogContainer");
+    const searchInput = document.getElementById("searchInput");
+    const clearSearch = document.getElementById("clearSearch");
+    const searchButton = document.getElementById("searchButton");
+    const autocompleteDropdown = document.getElementById("autocompleteDropdown");
+
+    const DEFAULT_BLOG_IMAGE = 'img/blog-default.jpg';
+
+    function normalizeBlogImage(url) {
+      const raw = typeof url === 'string' ? url.trim() : '';
+      if (!raw || raw === 'null' || raw === 'undefined') return DEFAULT_BLOG_IMAGE;
+      if (raw.startsWith('http://')) return 'https://' + raw.slice(7);
+      if (raw.startsWith('https://') || raw.startsWith('img/')) return raw;
+      return DEFAULT_BLOG_IMAGE;
+    }
+
+    function applyBlogImages(root = document) {
+      root.querySelectorAll('img[data-blog-image]').forEach((img) => {
+        let url = DEFAULT_BLOG_IMAGE;
+        try {
+          url = normalizeBlogImage(decodeURIComponent(img.dataset.blogImage || ''));
+        } catch (error) {
+          console.warn('Invalid blog image URL:', error);
+        }
+        img.onerror = () => {
+          img.onerror = null;
+          img.src = DEFAULT_BLOG_IMAGE;
+        };
+        img.src = url;
+      });
+    }
+
+    let allBlogs = [];
+    let filteredBlogs = [];
+
+    function safeEncodeURIComponent(str) {
+      const text = String(str ?? '');
+      try {
+        return encodeURIComponent(text);
+      } catch {
+        return encodeURIComponent(text.replace(/[\uD800-\uDFFF]/g, ''));
+      }
+    }
+
+    async function loadBanners() {
+      try {
+        const bannerSnapshot = await getDocs(collection(db, "banners"));
+        let bannerHTML = '';
+        bannerSnapshot.forEach((docSnap) => {
+          const banner = docSnap.data();
+          if (banner.imageUrl) {
+            bannerHTML += `<div class="banner-slide" style="background-image:url('${banner.imageUrl}')"></div>`;
+          }
+        });
+        if (bannerHTML) {
+          bannerTrack.innerHTML = bannerHTML + bannerHTML;
+        }
+      } catch (error) {
+        console.error("Error loading banners:", error);
+      }
+    }
+
+    async function loadMarquee() {
+      try {
+        const querySnapshot = await getDocs(collection(db, "blogs"));
+        let marqueeHTML = '';
+        querySnapshot.forEach((docSnap) => {
+          const blog = docSnap.data();
+          if (blog.title && blog.image) {
+            marqueeHTML += `
+              <div class="marquee-item">
+                <img src="${DEFAULT_BLOG_IMAGE}" data-blog-image="${encodeURIComponent(normalizeBlogImage(blog.image))}" alt="${blog.title}">
+                <span>${blog.title}</span>
+              </div>`;
+          }
+        });
+        if (marqueeHTML) {
+          marqueeContent.innerHTML = marqueeHTML + marqueeHTML;
+          applyBlogImages(marqueeContent);
+        }
+      } catch (error) {
+        console.error("Error loading marquee:", error);
+      }
+    }
+
+    async function getCommentCount(blogId) {
+      try {
+        const commentsRef = collection(db, "blogs", blogId, "comments");
+        const commentsSnapshot = await getDocs(commentsRef);
+        return commentsSnapshot.size;
+      } catch (error) {
+        console.error(`Error getting comments for ${blogId}:`, error);
+        return 0;
+      }
+    }
+
+    async function loadBlogs(blogsToDisplay = null) {
+      const blogsArray = blogsToDisplay || allBlogs;
+
+      const resultsInfo = document.getElementById('blogResultsInfo');
+      if (resultsInfo) {
+        const q = searchInput.value.trim();
+        const n = blogsArray.length;
+        resultsInfo.textContent = (blogsToDisplay && q)
+          ? `${n} ${n === 1 ? 'result' : 'results'} for “${q}”`
+          : `${n} ${n === 1 ? 'article' : 'articles'}`;
+      }
+      blogContainer.classList.toggle('has-featured', !blogsToDisplay && blogsArray.length > 2);
+      
+      console.log(`Loading ${blogsArray.length} blogs`);
+      
+      if (blogsArray.length === 0) {
+        blogContainer.innerHTML = `
+          <div class="col-12 text-center py-5">
+            <i class="fas fa-search fa-3x mb-3" style="color:var(--saffron-300)"></i>
+            <h4 class="text-muted">No blogs found</h4>
+            <p class="text-secondary">Try adjusting your search terms</p>
+          </div>`;
+        return;
+      }
+
+      // Create HTML for all blogs first
+      const blogHTMLArray = [];
+      
+      for (const blogData of blogsArray) {
+        try {
+          const blog = blogData.data;
+          const blogId = blogData.id;
+          const views = blog.views || 0;
+          const commentCount = await getCommentCount(blogId);
+
+          const title = blog.title || 'Untitled';
+          const content = blog.content || '';
+          const image = normalizeBlogImage(blog.image || blog.imageUrl);
+          const excerpt = content.length > 100 ? content.substring(0, 100) + '...' : content;
+          const longExcerpt = content.length > 280 ? content.substring(0, 280) + '...' : content;
+          const wordCount = content.trim() ? content.trim().split(/\s+/).length : 0;
+          const readMins = Math.max(1, Math.round(wordCount / 180));
+          const shareUrl = `https://www.sreevidyadhirajafoundation.com/blog-detail.html?id=${blogId}`;
+
+          blogHTMLArray.push(`
+          <div class="col-lg-4 col-md-6 d-flex" data-reveal>
+            <article class="blog-card w-100">
+              <a href="blog-detail.html?id=${blogId}" class="blog-card-media" data-blog-id="${blogId}" tabindex="-1" aria-hidden="true">
+                <img src="${DEFAULT_BLOG_IMAGE}" data-blog-image="${encodeURIComponent(image)}" alt="${title}" loading="lazy" decoding="async">
+                <span class="read-time"><i class="far fa-clock"></i> ${readMins} min read</span>
+              </a>
+
+              <div class="content">
+                <div>
+                  <div class="stats">
+                    <span class="view-counter" title="Views"><i class="fa fa-eye"></i> ${views}</span>
+                    <span class="comment-counter" title="Comments"><i class="fa fa-comments"></i> ${commentCount}</span>
+                  </div>
+                  <h5><a href="blog-detail.html?id=${blogId}" data-blog-id="${blogId}">${title}</a></h5>
+                  <p class="excerpt">${excerpt}</p>
+                  <p class="excerpt excerpt-long">${longExcerpt}</p>
+                </div>
+                <div class="blog-card-footer">
+                  <a href="blog-detail.html?id=${blogId}" class="read-link" data-blog-id="${blogId}">Read More <i class="fa fa-arrow-right"></i></a>
+
+                  <div class="share-buttons">
+                    <a href="https://wa.me/?text=${safeEncodeURIComponent(title + ' | Sree Vidyadhiraja Foundation') + '%0A%0A' + safeEncodeURIComponent(excerpt) + '%0A%0ARead more: ' + shareUrl}"
+                       target="_blank" rel="noopener"
+                       title="Share on WhatsApp" aria-label="Share on WhatsApp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=${safeEncodeURIComponent(shareUrl)}"
+                       target="_blank" rel="noopener"
+                       title="Share on Facebook" aria-label="Share on Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=${safeEncodeURIComponent(title)}&url=${safeEncodeURIComponent(shareUrl)}"
+                       target="_blank" rel="noopener"
+                       title="Share on Twitter" aria-label="Share on Twitter">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=${safeEncodeURIComponent(shareUrl)}"
+                       target="_blank" rel="noopener"
+                       title="Share on LinkedIn" aria-label="Share on LinkedIn">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>`);
+        } catch (error) {
+          console.error(`Error rendering blog ${blogData.id}:`, error);
+        }
+      }
+
+      // Set all HTML at once instead of using +=
+      blogContainer.innerHTML = blogHTMLArray.join('');
+      applyBlogImages(blogContainer);
+      
+      console.log(`Rendered ${blogHTMLArray.length} blog cards`);
+
+      // Add event listeners after all blogs are rendered
+      const blogLinks = document.querySelectorAll('a[data-blog-id]');
+      blogLinks.forEach(link => {
+        link.addEventListener('click', async (e) => {
+          e.preventDefault();
+          const blogId = link.getAttribute('data-blog-id');
+          try {
+            const blogRef = doc(db, "blogs", blogId);
+            await updateDoc(blogRef, { views: increment(1) });
+          } catch (error) {
+            console.error("Error updating views:", error);
+          }
+          window.location.href = link.getAttribute('href');
+        });
+      });
+    }
+
+    async function fetchAllBlogs() {
+      try {
+        console.log('Fetching all blogs...');
+        const blogsRef = collection(db, "blogs");
+        const querySnapshot = await getDocs(blogsRef);
+        
+        console.log(`Found ${querySnapshot.size} blogs in Firebase`);
+        
+        allBlogs = [];
+        querySnapshot.forEach((docSnap) => {
+          const blogData = docSnap.data();
+          console.log(`Blog ID: ${docSnap.id}`, blogData);
+          allBlogs.push({
+            id: docSnap.id,
+            data: blogData
+          });
+        });
+        
+        console.log(`Total blogs loaded: ${allBlogs.length}`);
+        filteredBlogs = allBlogs;
+        await loadBlogs();
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+        blogContainer.innerHTML = `
+          <div class="col-12 text-center py-5">
+            <i class="fas fa-exclamation-triangle fa-3x text-warning mb-3"></i>
+            <h4 class="text-muted">Error Loading Blogs</h4>
+            <p class="text-secondary">${error.message}</p>
+            <button class="btn btn-primary mt-3" onclick="location.reload()">Retry</button>
+          </div>`;
+      }
+    }
+
+    function highlightText(text, query) {
+      if (!query || !text) return text;
+      const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      return text.replace(regex, '<span class="autocomplete-highlight">$1</span>');
+    }
+
+    function searchBlogs(query) {
+      if (!query.trim()) {
+        filteredBlogs = allBlogs;
+        autocompleteDropdown.classList.remove('show');
+        clearSearch.classList.remove('show');
+        loadBlogs();
+        return;
+      }
+
+      clearSearch.classList.add('show');
+      const lowerQuery = query.toLowerCase();
+      
+      filteredBlogs = allBlogs.filter(blog => {
+        const titleMatch = (blog.data.title || '').toLowerCase().includes(lowerQuery);
+        const contentMatch = (blog.data.content || '').toLowerCase().includes(lowerQuery);
+        return titleMatch || contentMatch;
+      });
+
+      showAutocomplete(filteredBlogs, query);
+    }
+
+    function showAutocomplete(results, query) {
+      if (results.length === 0) {
+        autocompleteDropdown.innerHTML = '<div class="no-results">No blogs found matching your search</div>';
+        autocompleteDropdown.classList.add('show');
+        return;
+      }
+
+      const maxResults = 5;
+      const displayResults = results.slice(0, maxResults);
+      
+      autocompleteDropdown.innerHTML = displayResults.map(blog => {
+        const title = blog.data.title || 'Untitled';
+        const content = blog.data.content || '';
+        const excerpt = content.substring(0, 80);
+        const image = normalizeBlogImage(blog.data.image || blog.data.imageUrl);
+
+        return `
+          <div class="autocomplete-item" data-blog-id="${blog.id}">
+            <img src="${DEFAULT_BLOG_IMAGE}" data-blog-image="${encodeURIComponent(image)}" alt="${title}" loading="lazy" decoding="async">
+            <div class="autocomplete-item-content">
+              <div class="autocomplete-item-title">${highlightText(title, query)}</div>
+              <div class="autocomplete-item-excerpt">${highlightText(excerpt, query)}...</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      autocompleteDropdown.classList.add('show');
+      applyBlogImages(autocompleteDropdown);
+
+      document.querySelectorAll('.autocomplete-item').forEach(item => {
+        item.addEventListener('click', async () => {
+          const blogId = item.getAttribute('data-blog-id');
+          try {
+            const blogRef = doc(db, "blogs", blogId);
+            await updateDoc(blogRef, { views: increment(1) });
+          } catch (error) {
+            console.error("Error updating views:", error);
+          }
+          window.location.href = `blog-detail.html?id=${blogId}`;
+        });
+      });
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value;
+      searchBlogs(query);
+    });
+
+    searchButton.addEventListener('click', () => {
+      const query = searchInput.value;
+      if (query.trim()) {
+        autocompleteDropdown.classList.remove('show');
+        loadBlogs(filteredBlogs);
+      }
+    });
+
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        autocompleteDropdown.classList.remove('show');
+        loadBlogs(filteredBlogs);
+      }
+    });
+
+    clearSearch.addEventListener('click', () => {
+      searchInput.value = '';
+      clearSearch.classList.remove('show');
+      autocompleteDropdown.classList.remove('show');
+      filteredBlogs = allBlogs;
+      loadBlogs();
+      searchInput.focus();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.search-wrapper')) {
+        autocompleteDropdown.classList.remove('show');
+      }
+    });
+
+    // Initialize page
+    async function initializePage() {
+      try {
+        // Load all components
+        await Promise.all([
+          loadBanners(),
+          loadMarquee(),
+          fetchAllBlogs()
+        ]);
+      } catch (error) {
+        console.error("Error initializing page:", error);
+      }
+    }
+
+    // Start initialization
+    initializePage();
+  </script>
+</body>
+
+</html>

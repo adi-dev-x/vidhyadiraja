@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title id="pageTitle">Hindu today - Blog</title>
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="" id="ogUrl">
+  <meta property="og:title" content="" id="ogTitle">
+  <meta property="og:description" content="" id="ogDescription">
+  <meta property="og:image" content="" id="ogImage">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:secure_url" content="" id="ogImageSecure">
+  <meta property="og:site_name" content="Sree Vidyadhiraja Foundation">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="" id="twitterUrl">
+  <meta name="twitter:title" content="" id="twitterTitle">
+  <meta name="twitter:description" content="" id="twitterDescription">
+  <meta name="twitter:image" content="" id="twitterImage">
+  <meta name="theme-color" content="#061f33">
+  <link rel="icon" type="image/png" href="img/logov.png">
+  <script>document.documentElement.classList.replace('no-js','js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js')},2500);</script>
+
+  <!-- Fonts: Fraunces (display) + Plus Jakarta Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+
+  <!-- Framework & icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+  <!-- Design system -->
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="topbar d-none d-lg-block">
+      <div class="container">
+        <div class="d-flex gap-4">
+          <a href="tel:+919387292552"><i class="fa fa-phone-alt" aria-hidden="true"></i>+91 9387292552</a>
+          <a href="mailto:sreevidyadhirajafoundation@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i>sreevidyadhirajafoundation@gmail.com</a>
+        </div>
+        <span><i class="fa fa-map-marker-alt me-2" aria-hidden="true"></i>Thiruvananthapuram, Kerala</span>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-xl" aria-label="Main">
+      <div class="container">
+        <a href="index.html" class="navbar-brand brand">
+          <img src="img/opt/logo-160.png" alt="Sree Vidyadhiraja Foundation logo" width="44" height="44">
+          <span class="brand-name">The Hindu Today Online<small>Sree Vidyadhiraja Foundation</small></span>
+        </a>
+        <button class="nav-toggle d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-xl-auto">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="index.html#activity" class="nav-item nav-link">Activities</a>
+            <a href="product.html" class="nav-item nav-link">Campaign</a>
+            <a href="blog.html" class="nav-item nav-link active" aria-current="page">Blog</a>
+            <a href="videos.html" class="nav-item nav-link">Videos</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <div class="nav-cta">
+            <a href="donate.html" class="btn btn-gradient btn-sm px-4"><i class="fa fa-heart" aria-hidden="true"></i>Donate</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="page-main">
+  <section class="page-hero blog-hero" id="heroHeader" style="min-height: 460px">
+    <div class="banner-slider">
+      <div class="banner-track" id="bannerTrack"></div>
+    </div>
+    <div class="container">
+      <div class="hero-intro pb-5" style="max-width: 860px">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+            <li class="breadcrumb-item active text-truncate" style="max-width: 50vw" aria-current="page" id="breadcrumbTitle">Detail</li>
+          </ol>
+        </nav>
+        <h1 class="mt-4" id="blogTitle">Blog Title</h1>
+      </div>
+    </div>
+  </section>
+
+  <div class="blog-marquee" aria-label="More posts">
+    <div class="marquee-content" id="marqueeContent"></div>
+  </div>
+
+  <section class="pb-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <article class="col-lg-10 article-card blog-detail-card">
+          <div class="article-meta" aria-label="Article details">
+            <span class="meta-pill"><i class="far fa-clock" aria-hidden="true"></i><span id="articleReadTime">&ndash;</span></span>
+            <span class="meta-pill"><i class="fa fa-eye" aria-hidden="true"></i><span id="articleViews">&ndash;</span></span>
+            <a href="#comments" class="meta-pill"><i class="fa fa-comments" aria-hidden="true"></i><span id="articleComments">0 comments</span></a>
+          </div>
+          <img id="blogImage" src="img/blog-default.jpg" alt="Blog Image">
+          <h2 id="blogTitleCard" class="visually-hidden">Blog Title</h2>
+          <div id="blogContent"></div>
+
+          <div class="share-buttons">
+            <a href="#" id="shareWhatsapp" class="whatsapp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="#" id="shareFacebook" class="facebook" aria-label="Share on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" id="shareTwitter" class="twitter" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <button type="button" class="copy-link" id="copyLinkBtn"><i class="fa fa-link" aria-hidden="true"></i><span>Copy link</span></button>
+          </div>
+
+          <div class="comments-section" id="comments">
+            <h4 class="mb-3">Comments <span class="count-badge" id="commentCountBadge">0</span></h4>
+            <form id="commentForm" class="comment-form mb-4">
+              <div class="mb-3">
+                <input type="text" id="commentName" class="form-control" placeholder="Your Name" aria-label="Your Name" required>
+              </div>
+              <div class="mb-3">
+                <textarea id="commentText" class="form-control" rows="3" placeholder="Write your comment..." aria-label="Comment" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i>Post Comment</button>
+            </form>
+            <div id="commentsList"></div>
+          </div>
+
+          <a href="blog.html" class="btn btn-outline btn-back mt-4"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back to Blog</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt related-section d-none" id="relatedSection" aria-labelledby="relatedTitle">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Keep reading</span>
+        <h2 class="section-title" id="relatedTitle">Continue Reading</h2>
+      </div>
+      <div class="row g-4" id="relatedPosts" data-stagger="100"></div>
+      <div class="text-center mt-5"><a href="blog.html" class="btn btn-navy">View all articles <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4" data-reveal>
+          <a href="index.html" class="brand footer-brand mb-4">
+            <img src="img/opt/logo-160.png" alt="" width="48" height="48" loading="lazy">
+            <span class="brand-name">Sree Vidyadhiraja Foundation</span>
+          </a>
+          <p class="mb-0">We are committed to supporting communities through education, healthcare, livelihood, and social welfare initiatives to build a compassionate and self-reliant society.</p>
+        </div>
+
+        <div class="col-sm-6 col-lg-4" data-reveal data-reveal-delay="100ms">
+          <h4>Contact Us</h4>
+          <ul class="footer-contact">
+            <li><span class="ico"><i class="fa fa-map-marker-alt" aria-hidden="true"></i></span><span>Thiruvananthapuram</span></li>
+            <li><span class="ico"><i class="fa fa-phone-alt" aria-hidden="true"></i></span><a href="tel:+919387292552">+91 9387292552</a></li>
+            <li><span class="ico"><i class="fa fa-envelope" aria-hidden="true"></i></span><a href="mailto:sreevidyadhirajafoundation@gmail.com">sreevidyadhirajafoundation@gmail.com</a></li>
+          </ul>
+          <a href="https://wa.me/919387292552" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm mt-4 px-4"><i class="fab fa-whatsapp" aria-hidden="true"></i>Chat on WhatsApp</a>
+        </div>
+
+        <div class="col-sm-6 col-lg-4" data-reveal data-reveal-delay="200ms">
+          <h4>Explore Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#activity">Activities</a></li>
+            <li><a href="index.html#sermon">Initiatives</a></li>
+            <li><a href="product.html">Campaign</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <div class="footer-cta mt-4">
+            <h5 class="mb-2">Support our mission</h5>
+            <p class="small mb-3">Every contribution helps education, healthcare and community welfare.</p>
+            <a href="donate.html" class="btn btn-gradient btn-sm px-4"><i class="fa fa-heart" aria-hidden="true"></i>Donate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2 text-center text-md-start">
+        <span>&copy; <a href="index.html">Sree Vidyadhiraja Foundation</a>, All Rights Reserved.</span>
+        <span>Designed By <a href="#">Hevinka</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#main" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 54 54" width="54" height="54" aria-hidden="true"><circle class="track" cx="27" cy="27" r="24"/><circle class="bar" cx="27" cy="27" r="24"/></svg>
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/motion.js"></script>
+
+  <script>
+    document.getElementById('copyLinkBtn').addEventListener('click', function () {
+      var btn = this, label = btn.querySelector('span');
+      function done(ok) {
+        label.textContent = ok ? 'Link copied' : 'Copy failed';
+        btn.classList.toggle('is-copied', ok);
+        setTimeout(function () { label.textContent = 'Copy link'; btn.classList.remove('is-copied'); }, 2000);
+      }
+      function legacyCopy() {
+        var t = document.createElement('textarea');
+        t.value = window.location.href; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0';
+        document.body.appendChild(t); t.select();
+        var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+        t.remove(); done(ok);
+      }
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(window.location.href).then(function () { done(true); }, legacyCopy);
+      } else {
+        legacyCopy();
+      }
+    });
+  </script>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getFirestore, doc, getDoc, collection, getDocs, addDoc, query, orderBy, onSnapshot, updateDoc, increment } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCxzn7eUe9QRa0sjLp4v6rS2RJU_cRCtkg",
+      authDomain: "vidyadhiraja-b6ec5.firebaseapp.com",
+      projectId: "vidyadhiraja-b6ec5",
+      storageBucket: "vidyadhiraja-b6ec5.firebasestorage.app",
+      messagingSenderId: "1018541742665",
+      appId: "1:1018541742665:web:4ded9d4c51d33edd203d98"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const bannerTrack = document.getElementById("bannerTrack");
+
+    async function loadBanners() {
+      try {
+        const bannerSnapshot = await getDocs(collection(db, "banners"));
+        if (bannerSnapshot.empty) {
+          bannerTrack.innerHTML = '<div class="banner-slide" style="background-image: url(\'img/default-banner.jpg\')"></div>';
+          return;
+        }
+        let bannerHTML = '';
+        bannerSnapshot.forEach((doc) => {
+          const banner = doc.data();
+          bannerHTML += `<div class="banner-slide" style="background-image: url('${banner.imageUrl}')"></div>`;
+        });
+        bannerTrack.innerHTML = bannerHTML + bannerHTML;
+      } catch (error) {
+        console.log("Error loading banners:", error);
+      }
+    }
+
+    function getBlogId() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('id');
+    }
+
+    function safeEncodeURIComponent(str) {
+      const text = String(str ?? '');
+      try {
+        return encodeURIComponent(text);
+      } catch {
+        return encodeURIComponent(text.replace(/[\uD800-\uDFFF]/g, ''));
+      }
+    }
+
+    const DEFAULT_BLOG_IMAGE = 'img/blog-default.jpg';
+
+    function normalizeBlogImage(url) {
+      const raw = typeof url === 'string' ? url.trim() : '';
+      if (!raw || raw === 'null' || raw === 'undefined') return DEFAULT_BLOG_IMAGE;
+      if (raw.startsWith('http://')) return 'https://' + raw.slice(7);
+      if (raw.startsWith('https://') || raw.startsWith('img/')) return raw;
+      return DEFAULT_BLOG_IMAGE;
+    }
+
+    function setBlogImage(imgEl, url) {
+      const normalized = normalizeBlogImage(url);
+      imgEl.onerror = () => {
+        imgEl.onerror = null;
+        imgEl.src = DEFAULT_BLOG_IMAGE;
+      };
+      imgEl.src = normalized;
+    }
+
+    function getAbsoluteImageUrl(url) {
+      const normalized = normalizeBlogImage(url);
+      if (normalized.startsWith('http')) return normalized;
+      return new URL(normalized, window.location.href).href;
+    }
+
+    // Update meta tags dynamically for social sharing
+    function updateMetaTags(blog) {
+      const currentUrl = window.location.href;
+      const description = blog.content.substring(0, 160).replace(/<[^>]*>/g, '').replace(/[^\w\s]/gi, ' ').trim();
+      
+      // Update page title
+      document.getElementById('pageTitle').textContent = `${blog.title} - Sree Vidyadhiraja Foundation`;
+      document.title = `${blog.title} - Sree Vidyadhiraja Foundation`;
+      
+      // Update Open Graph tags
+      document.getElementById('ogUrl').setAttribute('content', currentUrl);
+      document.getElementById('ogTitle').setAttribute('content', blog.title);
+      document.getElementById('ogDescription').setAttribute('content', description);
+      document.getElementById('ogImage').setAttribute('content', getAbsoluteImageUrl(blog.image || blog.imageUrl));
+      document.getElementById('ogImageSecure').setAttribute('content', getAbsoluteImageUrl(blog.image || blog.imageUrl));
+      
+      // Update Twitter tags
+      document.getElementById('twitterUrl').setAttribute('content', currentUrl);
+      document.getElementById('twitterTitle').setAttribute('content', blog.title);
+      document.getElementById('twitterDescription').setAttribute('content', description);
+      document.getElementById('twitterImage').setAttribute('content', getAbsoluteImageUrl(blog.image || blog.imageUrl));
+    }
+
+    async function loadBlog() {
+      const id = getBlogId();
+      if (!id) return;
+
+      const blogRef = doc(db, "blogs", id);
+      const blogSnap = await getDoc(blogRef);
+
+      if (blogSnap.exists()) {
+        const blog = blogSnap.data();
+        
+        // Update meta tags for social sharing
+        updateMetaTags(blog);
+        
+        document.getElementById('blogTitle').textContent = blog.title;
+        document.getElementById('breadcrumbTitle').textContent = blog.title;
+        document.getElementById('blogTitleCard').textContent = blog.title;
+        setBlogImage(document.getElementById('blogImage'), blog.image || blog.imageUrl);
+        
+        // Display content with preserved formatting
+        document.getElementById('blogContent').textContent = blog.content;
+
+        // Article meta: reading time + views
+        const words = (blog.content || '').trim() ? blog.content.trim().split(/\s+/).length : 0;
+        document.getElementById('articleReadTime').textContent = `${Math.max(1, Math.round(words / 180))} min read`;
+        const views = blog.views || 0;
+        document.getElementById('articleViews').textContent = `${views.toLocaleString('en-IN')} ${views === 1 ? 'view' : 'views'}`;
+
+        const shareUrl = window.location.href;
+        document.getElementById('shareWhatsapp').href = `https://wa.me/?text=${safeEncodeURIComponent(blog.title + ' ' + shareUrl)}`;
+        document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${safeEncodeURIComponent(shareUrl)}`;
+        document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?text=${safeEncodeURIComponent(blog.title)}&url=${safeEncodeURIComponent(shareUrl)}`;
+
+        loadComments(id);
+      } else {
+        document.getElementById('blogContent').innerHTML = "<p>Blog not found.</p>";
+      }
+    }
+
+    async function loadMarquee() {
+      try {
+        const querySnapshot = await getDocs(collection(db, "blogs"));
+        let marqueeHTML = '';
+        querySnapshot.forEach((docSnap) => {
+          const blog = docSnap.data();
+          if (!blog.image && !blog.imageUrl) return;
+          marqueeHTML += `
+            <div class="marquee-item">
+              <img src="${DEFAULT_BLOG_IMAGE}" data-blog-image="${encodeURIComponent(normalizeBlogImage(blog.image || blog.imageUrl))}" alt="${blog.title || 'Blog'}">
+              <span>${blog.title || ''}</span>
+            </div>`;
+        });
+        marqueeContent.innerHTML = marqueeHTML + marqueeHTML;
+        marqueeContent.querySelectorAll('img[data-blog-image]').forEach((img) => {
+          setBlogImage(img, decodeURIComponent(img.dataset.blogImage || ''));
+        });
+        renderRelated(querySnapshot);
+      } catch (error) {
+        console.log("Error loading marquee");
+      }
+    }
+
+    // "Continue reading": three other posts, opened the same way as from the blog list (counts a view)
+    function renderRelated(snapshot) {
+      const currentId = getBlogId();
+      const others = [];
+      snapshot.forEach((docSnap) => { if (docSnap.id !== currentId) others.push({ id: docSnap.id, ...docSnap.data() }); });
+      if (!others.length) return;
+      const relatedPosts = document.getElementById('relatedPosts');
+      relatedPosts.innerHTML = others.slice(0, 3).map((b) => {
+        const content = b.content || '';
+        const excerpt = content.length > 110 ? content.substring(0, 110) + '...' : content;
+        const words = content.trim() ? content.trim().split(/\s+/).length : 0;
+        return `
+          <div class="col-md-6 col-lg-4 d-flex" data-reveal>
+            <article class="blog-card w-100">
+              <a href="blog-detail.html?id=${b.id}" class="blog-card-media related-link" data-related-id="${b.id}" tabindex="-1" aria-hidden="true">
+                <img src="${DEFAULT_BLOG_IMAGE}" data-blog-image="${encodeURIComponent(normalizeBlogImage(b.image || b.imageUrl))}" alt="${b.title || 'Blog'}" loading="lazy" decoding="async">
+                <span class="read-time"><i class="far fa-clock"></i> ${Math.max(1, Math.round(words / 180))} min read</span>
+              </a>
+              <div class="content">
+                <div>
+                  <h5><a href="blog-detail.html?id=${b.id}" class="related-link" data-related-id="${b.id}">${b.title || 'Untitled'}</a></h5>
+                  <p class="excerpt">${excerpt}</p>
+                </div>
+                <div class="blog-card-footer">
+                  <a href="blog-detail.html?id=${b.id}" class="read-link related-link" data-related-id="${b.id}">Read More <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>`;
+      }).join('');
+      relatedPosts.querySelectorAll('img[data-blog-image]').forEach((img) => {
+        setBlogImage(img, decodeURIComponent(img.dataset.blogImage || ''));
+      });
+      relatedPosts.querySelectorAll('a.related-link').forEach((link) => {
+        link.addEventListener('click', async (e) => {
+          e.preventDefault();
+          try {
+            await updateDoc(doc(db, "blogs", link.dataset.relatedId), { views: increment(1) });
+          } catch (error) {
+            console.error("Error updating views:", error);
+          }
+          window.location.href = link.getAttribute('href');
+        });
+      });
+      document.getElementById('relatedSection').classList.remove('d-none');
+    }
+
+    // Comments system
+    async function loadComments(blogId) {
+      const commentsRef = collection(db, "blogs", blogId, "comments");
+      const q = query(commentsRef, orderBy("timestamp", "desc"));
+      const commentsList = document.getElementById("commentsList");
+
+      onSnapshot(q, (snapshot) => {
+        commentsList.innerHTML = "";
+        const total = snapshot.size;
+        document.getElementById('commentCountBadge').textContent = total;
+        document.getElementById('articleComments').textContent = `${total} ${total === 1 ? 'comment' : 'comments'}`;
+        if (snapshot.empty) {
+          commentsList.innerHTML = '<p class="comments-empty"><i class="far fa-comment-dots" aria-hidden="true"></i> Be the first to share your thoughts.</p>';
+        }
+        snapshot.forEach((doc) => {
+          const c = doc.data();
+          const date = c.timestamp ? c.timestamp.toDate().toLocaleString() : "";
+          const initial = String(c.name || '?').trim().charAt(0).toUpperCase() || '?';
+          commentsList.innerHTML += `
+            <div class="comment">
+              <span class="comment-avatar" aria-hidden="true">${initial}</span>
+              <div class="comment-body">
+                <div class="comment-head"><strong>${c.name}</strong> <small class="text-muted">${date}</small></div>
+                <p>${c.text}</p>
+              </div>
+            </div>`;
+        });
+      });
+    }
+
+    document.getElementById("commentForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = document.getElementById("commentName").value.trim();
+      const text = document.getElementById("commentText").value.trim();
+      if (!name || !text) return;
+
+      const id = getBlogId();
+      const commentsRef = collection(db, "blogs", id, "comments");
+      await addDoc(commentsRef, { name, text, timestamp: new Date() });
+      document.getElementById("commentForm").reset();
+    });
+
+    loadBanners();
+    loadMarquee();
+    loadBlog();
+  </script>
+</body>
+
+</html>
