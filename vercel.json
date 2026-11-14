@@ -16,6 +16,12 @@
     { "source": "/admin-dashboard", "destination": "/admin-dashboard.html" }
   ],
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "hevinka.com" }],
+      "destination": "https://www.hevinka.com/:path*",
+      "permanent": true
+    },
     { "source": "/:path*.html", "destination": "/:path*", "permanent": true }
   ]
 }
